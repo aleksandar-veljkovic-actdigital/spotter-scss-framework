@@ -1,0 +1,42 @@
+@import "config";
+@import "reset";
+@import "typography";
+@import "grid";
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $rhythm;
+  padding-right: $rhythm;
+}
+
+.section-title {
+  background-color: #eee;
+  padding-top: $rhythm;
+  padding-bottom: 0.1px;
+  margin-bottom: $rhythm;
+}
+
+section {
+  padding-bottom: $rhythm;
+}
+
+#header {
+  background-color: #eee;
+  padding-top: $rhythm;
+  padding-bottom: $rhythm;
+  margin-bottom: $rhythm;
+}
+
+#main {
+
+}
+
+#footer {
+  background-color: #eee;
+  padding-top: $rhythm;
+  padding-bottom: $rhythm;
+}
+
+@include grid;

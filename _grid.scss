@@ -1,0 +1,39 @@
+$rhythm: $rhythm !default;
+
+@mixin grid-clearfix {
+  position: relative;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin grid-item($n:1, $length:12, $rhythm: $rhythm) {
+  display: inline;
+  float: left;
+  width: #{($n/$length)*100%};
+  padding-left: $rhythm;
+  padding-right: $rhythm;
+}
+
+@mixin grid-row($rhythm: $rhythm) {
+  @include grid-clearfix;
+  position: relative;
+  margin-left: -$rhythm;
+  margin-right: -$rhythm;
+}
+
+@mixin grid($length: 12, $rhythm:$rhythm) {
+  //#{enumerate(".grid", 1, $cols, $grid-class-separator)} {
+  //  @include grid-unit-base($gutter-width);
+  //}
+  .row {
+    @include grid-row($rhythm)
+  }
+  @for $n from 1 through $length {
+    .col-#{$n} {
+      @include grid-item($n, $length);
+    }
+  }
+}
