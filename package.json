@@ -1,0 +1,16 @@
+{
+  "name": "spotter-scss-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/biosonic/spotter-scss-framework.git",
+  "author": "Aleksandar Veljkovic coa.develop@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.15.1"
+  },
+  "scripts": {
+    "start": "node-sass -w --include-path scss demo.scss   demo/demo.css",
+    "build": "node-sass --include-path scss demo.scss   demo/demo.css"
+  }
+}
